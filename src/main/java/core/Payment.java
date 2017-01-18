@@ -13,7 +13,7 @@ import org.openqa.selenium.htmlunit.HtmlUnitDriver;
 public class Payment {
        static String browser = "Chrome1";  // "HtmlUnit"
        public static void main(String[] args) throws InterruptedException {
-              String url = "http://alex.academy/exercises/payment/index.html";
+              String url = "http://alex.academy/exercises/payment/indexE.html";
 
               Logger logger = Logger.getLogger("");
               logger.setLevel(Level.OFF);
@@ -26,7 +26,7 @@ public class Payment {
 	              option.addArguments("-start-fullscreen");
               
 	              driver = new ChromeDriver(option);
-	              //driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS); What is a function of this method????
+	              driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS); //What is a function of this method????
 	              }
               else{driver = new HtmlUnitDriver();((HtmlUnitDriver) driver).setJavascriptEnabled(true);}
               
@@ -47,7 +47,7 @@ public class Payment {
               System.out.println("m.group(2): \t" + m.group(2));
               // System.out.println("m.group(3): \t" + m.group(3)); //java.lang.IndexOutOfBoundsException: No group 3
               
-              double monthly_payment = Double.parseDouble(m.group(2).replaceAll(",", "")); // 1,654.55
+              double monthly_payment = Double.parseDouble(m.group(1).replaceAll(",", "")); // 1,654.55
               double annual_payment = new BigDecimal(monthly_payment * 12).setScale(2, RoundingMode.HALF_UP).doubleValue(); // 1654.55 * 12 = 19854.6
               DecimalFormat df = new DecimalFormat("0.00");// 19854.60
               String f_annual_payment = df.format(annual_payment);
