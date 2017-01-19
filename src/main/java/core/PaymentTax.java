@@ -13,7 +13,7 @@ import org.openqa.selenium.htmlunit.HtmlUnitDriver;
 public class PaymentTax {
        static String browser = "Chrome1";  // "HtmlUnit"
        public static void main(String[] args) throws InterruptedException {
-              String url = "http://alex.academy/exercises/payment+tax/index.html";
+              String url = "http://alex.academy/exercises/payment+tax/indexE.html";
 
               Logger logger = Logger.getLogger("");
               logger.setLevel(Level.OFF);
