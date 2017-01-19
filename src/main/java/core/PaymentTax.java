@@ -69,7 +69,7 @@ driver.findElement(By.id("id_annual_payment_with_tax")).sendKeys(String.valueOf(
               System.out.println("String: \t\t " + m.group(0));
               System.out.println("Annual Payment with Tax: " + annual_payment_with_tax);
               System.out.println("Result: \t\t " + actual_result);
-              System.out.println("Resonse time: \t\t " + (finish - start) + " milliseconds:");
+              System.out.println("Resonse time: \t\t " + (finish - start) + " milliseconds");
               //=======================================
               
               
